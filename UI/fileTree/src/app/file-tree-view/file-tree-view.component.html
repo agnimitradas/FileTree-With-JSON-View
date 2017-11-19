@@ -1,0 +1,19 @@
+<ol class="tree" *ngIf="!loadChild">
+		
+		<li>
+			<label for="folder2">{{fileData.name}}</label> <input type="checkbox" id="folder2" /> 
+			<ol>
+				<li *ngFor="let files of fileData.children">
+					<label for="subfolder2" (click)="folderClicked(files)">{{files.name}}</label>  
+				  <div *ngIf="files.children">
+            <ol *ngFor="let subfiles of files.children">
+              <li class="file"><a href="">{{subfiles.name}}</a></li>
+            </ol>
+				  </div>
+				</li>
+			</ol>
+		</li>
+		
+	</ol>
+
+  <app-json-formatter *ngIf="loadChild" [jsondata]="readFileData"></app-json-formatter>

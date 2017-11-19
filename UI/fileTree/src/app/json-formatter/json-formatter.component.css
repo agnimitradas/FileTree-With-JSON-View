@@ -1,0 +1,15 @@
+.container {
+  display:flex;
+  justify-content:center;
+}
+.container > div {
+  margin:10px;
+  height: 500px;
+  
+}
+.first, .third {
+  width:30%;
+}
+.second {
+  width:30%;
+}
