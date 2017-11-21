@@ -1,15 +1,48 @@
 .container {
-  display:flex;
-  justify-content:center;
+    display: flex;
+    justify-content: center;
 }
-.container > div {
-  margin:10px;
-  height: 500px;
-  
+
+.container>div {
+    margin: 10px;
+    height: 500px;
 }
-.first, .third {
-  width:30%;
+
+.first,
+.third {
+    width: 30%;
 }
+
 .second {
-  width:30%;
+    width: 30%;
+}
+
+.headerText {
+    position: relative;
+    float: left;
+    left: 50%;
+    transform: translate(-50%, -120%);
+    font-weight: bold
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 10px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    margin-left: 20%;
+}
+
+button {
+    background-color: #3883fa;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.inputSection {
+    margin-top: -2%;
 }

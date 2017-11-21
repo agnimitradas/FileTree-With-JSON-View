@@ -8,13 +8,14 @@ import { AppComponent } from './app.component';
 import { JsonFormatterComponent } from './json-formatter/json-formatter.component';
 import { FileTreeViewComponent } from './file-tree-view/file-tree-view.component';
 import { FileService } from "./shared/file.service";
+import { ResponseService } from "./shared/response.service";
 
 
 const route=[
       {path:' ', redirectTo: 'fileTreeView', pathMatch:'full'},
       {path:'fileTreeView', component:FileTreeViewComponent},
       {path:'jsonView', component:JsonFormatterComponent},
-     {path:'**', redirectTo: 'fileTreeView', pathMatch:'full'}
+      {path:'**', redirectTo: 'fileTreeView', pathMatch:'full'}
     ];
 
 @NgModule({
@@ -29,7 +30,7 @@ const route=[
     HttpModule,
    RouterModule.forRoot(route)
   ],
-  providers: [FileService],
+  providers: [FileService,ResponseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

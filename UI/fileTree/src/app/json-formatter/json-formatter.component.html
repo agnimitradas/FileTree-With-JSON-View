@@ -1,5 +1,19 @@
-<div class="container"> 
-    <div class="first"><json-editor [options]="editorOptions" [data]="data" ></json-editor></div>
-    <div class="second"><json-editor [options]="editorOptions" [data]="jsondata[1]" ></json-editor></div>
-    <div class="third"><json-editor [options]="editorOptions" [data]="jsondata[2]" ></json-editor></div>
+<div class="inputSection">
+    <input type="text" placeholder="Enter sequence url">
+    <button (click)="submitSequence()">Submit</button>
+    <button (click)="generateResponse()">Generate response.json</button>
+</div>
+<div class="container">
+    <div class="first">
+        <json-editor [options]="editorOptions" [data]="payLoadData"></json-editor>
+        <span class="headerText">payLoad.json</span>
+    </div>
+    <div class="second">
+        <json-editor [options]="editorOptions" [data]="sequenceData"></json-editor>
+        <span class="headerText">sequence.json</span>
+    </div>
+    <div class="third">
+        <json-editor [options]="editorOptions" [data]="responseData"></json-editor>
+        <span class="headerText">response.json</span>
+    </div>
 </div>
